@@ -20,11 +20,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'redis', '2.2.2'
+
 gem 'jquery-rails'
 
 # Job Scheduling
 gem 'resque' # background jobs
-gem 'resque-scheduler', '2.5.5' # job scheduling
+gem 'resque-scheduler', '2.0.1' # job scheduling
 
 group :development do
   gem 'capistrano', '~> 3.1.0'

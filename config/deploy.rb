@@ -73,6 +73,7 @@ role :resque_scheduler, "localhost:2222"
 # queue name and number of workers
 set :workers, { "example_queue" => 2 }
 
+set :resque_log_file, "log/resque.log"
 # We default to storing PID files in a tmp/pids folder in your shared path, but
 # you can customize it here (make sure to use a full path). The path will be
 # created before starting workers if it doesn't already exist.
