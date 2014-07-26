@@ -32,4 +32,5 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-unicorn', require: false, github: 'inbeom/capistrano-unicorn', branch: 'capistrano3'
   gem 'capistrano-rvm'
+  gem "capistrano-resque", "~> 0.2.0", require: false
 end

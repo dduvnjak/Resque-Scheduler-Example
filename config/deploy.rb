@@ -62,3 +62,21 @@ namespace :deploy do
   after 'deploy:restart', 'unicorn:duplicate' # before_fork hook implemented (zero downtime deployments)
 
 end
+
+## resque
+role :resque_worker, "localhost"
+role :resque_scheduler, "localhost"
+
+# queue name and number of workers
+set :workers, { "example_queue" => 2 }
+
+# We default to storing PID files in a tmp/pids folder in your shared path, but
+# you can customize it here (make sure to use a full path). The path will be
+# created before starting workers if it doesn't already exist.
+# set :resque_pid_path, -> { File.join(shared_path, 'tmp', 'pids') }
+
+# Uncomment this line if your workers need access to the Rails environment:
+# set :resque_environment_task, true
+#You can also specify multiple queues and the number of workers for each queue:
+
+#set :workers, { "archive" => 1, "mailing" => 3, "search_index, cache_warming" => 1 }
