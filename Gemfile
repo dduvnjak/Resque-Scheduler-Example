@@ -24,7 +24,7 @@ gem 'jquery-rails'
 
 # Job Scheduling
 gem 'resque' # background jobs
-gem 'resque-scheduler' # job scheduling
+gem 'resque-scheduler', '2.5.5' # job scheduling
 
 group :development do
   gem 'capistrano', '~> 3.1.0'
