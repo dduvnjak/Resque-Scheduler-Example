@@ -26,7 +26,7 @@ gem 'jquery-rails'
 
 # Job Scheduling
 gem 'resque' # background jobs
-gem 'resque-scheduler', '2.0.1' # job scheduling
+gem 'resque-scheduler', '2.1.0' # job scheduling
 gem 'rufus-scheduler', '~> 2.0.24'
 
 group :development do
