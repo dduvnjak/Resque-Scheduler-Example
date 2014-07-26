@@ -61,11 +61,14 @@ namespace :deploy do
   after 'deploy:restart', 'unicorn:restart'   # app preloaded
   after 'deploy:restart', 'unicorn:duplicate' # before_fork hook implemented (zero downtime deployments)
 
+  # restart resque workers automatically
+  after "deploy:restart", "resque:restart"
+
 end
 
 ## resque
-role :resque_worker, "localhost"
-role :resque_scheduler, "localhost"
+role :resque_worker, "localhost:2222"
+role :resque_scheduler, "localhost:2222"
 
 # queue name and number of workers
 set :workers, { "example_queue" => 2 }
